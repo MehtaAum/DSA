@@ -9,27 +9,25 @@
 // Sum of digits = 2 + 3 + 4 = 9 
 // Result = 24 - 9 = 15
 
-class Solution {
-    public:
-        int subtractProductAndSum(int n) {
+#include <iostream>
+using namespace std;
+int main() {
+
+    int n = 234;
+    int p = 1;
+    int sum = 0;
+
+    while(n!=0){
+    
+    int digit = n%10;
+    p = p * digit;
+    sum = sum + digit;
+
+    n = n/10;
+    }
+    int result = p - sum;
+
+    return result;
+    
         
-        int p = 1;
-        int sum = 0;
-    
-        while(n!=0){
-        
-        int digit = n%10;
-        p = p * digit;
-        sum = sum + digit;
-    
-        n = n/10;
-        }
-        int result = p - sum;
-    
-        return result;
-    
-        
-            
-    
-        }
-    };
+}
