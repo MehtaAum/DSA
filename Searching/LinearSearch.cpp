@@ -11,7 +11,6 @@ bool search(int a[] ,int size , int key){
         }
     }
     return 0;
-    
 }
 
 int main() {
