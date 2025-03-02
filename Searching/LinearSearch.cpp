@@ -1,3 +1,5 @@
+//question from : (code help yt channel) // to understand linear search
+
 #include <iostream>
 using namespace std;
 
