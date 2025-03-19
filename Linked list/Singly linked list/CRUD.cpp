@@ -24,10 +24,30 @@ public:
 class singlyLinked{
 public:
 
+//constructor
+singlyLinked() {
+  head = NULL;
+}
+
+//destructor
+~singlyLinked(){
+  node* temp;
+  while(head){
+    temp = head;
+    head = head->next;
+    delete temp;
+  }
+}
+
 node* head; //global to access in other function
 
   void insertatEnd(int t){
      
+          //edge case
+          if(t <= 0){
+            cout<<endl<<"Number of nodes must be greater than 0"<<endl;
+          }
+          
           int value;
           cout<<endl<<"Value in first node = ";
           cin>>value;
@@ -110,11 +130,20 @@ node* head; //global to access in other function
     cout<<endl<<"Which position you want to DELETE ? : ";
     cin>>position;
 
+        //edge case
+        if(head == NULL){
+          cout<<endl<<"-------------- Empty Linked list --------------"<<endl;
+          return;
+        }
+    
+
     node* temp = head;
     node* current = head;
     node* previous = NULL;
 
 
+
+//delete from starting
     if(position == 1){
       head = head->next;
       
@@ -122,6 +151,7 @@ node* head; //global to access in other function
       return;
     }
 
+//delete from middle and last
     else{
 
       while(count < position && current != NULL){
@@ -132,6 +162,7 @@ node* head; //global to access in other function
 
       if(current == NULL){
         cout<<endl<<"Does not exist in Linked list"<<endl;
+        return;
 
       }
 
@@ -149,7 +180,7 @@ node* head; //global to access in other function
 int main() {
     
     singlyLinked list;
-    int user , total ;
+    int user = -1, total ;
 
     while(user != 0){
 
@@ -194,7 +225,7 @@ int main() {
                 break;
 
                 case 0:
-                 cout<<endl<<"- - - - - ( EXIT ) - - - - -"<<endl;
+                 cout<<endl<<"- - - - - ( EXIT ) - - - - -"<<endl<<endl;
                  exit(0);
                 break;
 
