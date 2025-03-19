@@ -231,6 +231,7 @@ int main() {
 
 
             default:
+            cout<<endl<<"----------- invalid ! -----------"<<endl;
             break;
         }
 
