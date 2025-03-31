@@ -9,6 +9,7 @@ using namespace std;
 int main(){
 
     int size;
+    bool sorted = false;
 
     cout<<"Enter size of array : ";
     cin>>size;
@@ -30,15 +31,24 @@ int main(){
                 temp = arr[j+1];
                 arr[j+1] = arr[j];
                 arr[j] = temp;
+                sorted = true;
             }
         }
+
+        if(sorted == false){ //if array is already sorted
+            cout<<endl<<"-------------- Array is already SORTED --------------"<<endl;
+        break;
+        }
     }
+
 
     cout<<endl<<"After sort : "<<endl<<endl;
 
     for(int l = 0; l < size; l++){
        cout<<arr[l]<<"  ";
     }
+
+    
     
 }
 
