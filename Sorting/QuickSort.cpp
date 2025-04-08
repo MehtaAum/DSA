@@ -1,3 +1,7 @@
+// Quick Sort is a divide-and-conquer algorithm that picks a pivot,
+// then partitions the array so smaller elements are on the left, larger on the right.
+// It then recursively sorts the left and right parts.
+
 #include <iostream>
 using namespace std;
 
