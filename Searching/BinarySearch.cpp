@@ -75,7 +75,7 @@ int binarysearch (int a[] , int size , int key){
 
 int main(){
 
-    int size , countA = 0 , countB = 0 , key;
+    int size , key;
     cout<<"Enter size of array : ";
     cin>>size;
 
